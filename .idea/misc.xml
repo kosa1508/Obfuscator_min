@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/build/docs/javadoc" />
+    <option name="OTHER_OPTIONS" value="-encoding UTF-8 -charset UTF-8 -docencoding UTF-8 -Xdoclint:none -quiet -link https://docs.oracle.com/javase/8/docs/api/ -windowtitle &quot;Java Obfuscator API&quot; -doctitle &quot;Java Code Obfuscator Documentation&quot; -locale en_US -subpackages com.obfuscator -exclude **/test/**:*Test.java:*Tests.java:test_files/*" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="23" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

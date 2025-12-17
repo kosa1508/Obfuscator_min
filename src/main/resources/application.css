@@ -1,0 +1,135 @@
+
+
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+
+.button {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 2);
+}
+
+.button:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 1);
+    -fx-translate-y: 1;
+}
+
+
+.text-field {
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-padding: 8;
+}
+
+.text-field:focused {
+    -fx-border-color: #3498db;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 5, 0, 0, 0);
+}
+
+
+.text-area {
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+}
+
+.text-area .content {
+    -fx-background-radius: 3;
+    -fx-padding: 10;
+}
+
+
+.check-box {
+    -fx-text-fill: #2c3e50;
+}
+
+.check-box .box {
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-color: #bdc3c7;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #3498db;
+}
+
+
+.progress-bar {
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-color: #bdc3c7;
+}
+
+.progress-bar .track {
+    -fx-background-radius: 3;
+    -fx-background-color: #ecf0f1;
+}
+
+.progress-bar .bar {
+    -fx-background-radius: 3;
+    -fx-padding: 6;
+}
+
+
+.label {
+    -fx-text-fill: #2c3e50;
+}
+
+.label.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.label.subtitle {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+
+.separator .line {
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 0 0 1 0;
+}
+
+
+.dialog-pane {
+    -fx-background-color: white;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #3498db;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.status-success {
+    -fx-text-fill: #27ae60;
+}
+
+.status-error {
+    -fx-text-fill: #e74c3c;
+}
+
+.status-warning {
+    -fx-text-fill: #f39c12;
+}
+
+.status-info {
+    -fx-text-fill: #3498db;
+}

@@ -1,0 +1,5 @@
+rootProject.name = 'java-obfuscator'
+include 'test_files'
+include 'test_files:inout'
+findProject(':test_files:inout')?.name = 'inout'
+

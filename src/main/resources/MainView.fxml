@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      spacing="15"
+      style="-fx-padding: 20; -fx-background-color: #f5f5f5;"
+      fx:controller="com.obfuscator.gui.MainController">
+
+    <HBox alignment="CENTER">
+        <Label text="Java Code Obfuscator"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;">
+            <padding>
+                <Insets bottom="10" />
+            </padding>
+        </Label>
+    </HBox>
+
+    <Separator />
+
+    <GridPane hgap="15" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="150" />
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="NEVER" />
+        </columnConstraints>
+
+        <!-- Input Directory -->
+        <Label text="Input Directory:"
+               GridPane.rowIndex="0" GridPane.columnIndex="0"
+               style="-fx-font-weight: bold;" />
+
+        <HBox spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="1">
+            <TextField fx:id="inputField"
+                       promptText="Select input directory"
+                       style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-radius: 3;"
+                       HBox.hgrow="ALWAYS" />
+            <Button fx:id="browseInputButton"
+                    text="Browse..."
+                    onAction="#browseInput"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" />
+        </HBox>
+
+        <Label text="Output Directory:"
+               GridPane.rowIndex="1" GridPane.columnIndex="0"
+               style="-fx-font-weight: bold;" />
+
+        <HBox spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="1">
+            <TextField fx:id="outputField"
+                       promptText="Select output directory"
+                       style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-radius: 3;"
+                       HBox.hgrow="ALWAYS" />
+            <Button fx:id="browseOutputButton"
+                    text="Browse..."
+                    onAction="#browseOutput"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" />
+        </HBox>
+
+        <!-- Options -->
+        <Label text="Options:"
+               GridPane.rowIndex="2" GridPane.columnIndex="0"
+               style="-fx-font-weight: bold;" />
+
+        <VBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <CheckBox fx:id="preserveStructureCheckbox"
+                      text="Preserve directory structure"
+                      selected="true"
+                      style="-fx-font-size: 14px;" />
+            <CheckBox fx:id="excludeTestsCheckbox"
+                      text="Exclude test files"
+                      selected="true"
+                      style="-fx-font-size: 14px;" />
+        </VBox>
+    </GridPane>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="startButton"
+                text="Start Obfuscation"
+                onAction="#startObfuscation"
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16px; -fx-padding: 10 30;" />
+
+        <Button text="Clear Logs"
+                onAction="#clearLogs"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" />
+
+        <Button text="Export Logs"
+                onAction="#exportLogs"
+                style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold;" />
+
+        <Button text="About"
+                onAction="#showAbout"
+                style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-font-weight: bold;" />
+    </HBox>
+
+    <ProgressBar fx:id="progressBar"
+                 progress="0"
+                 visible="false"
+                 style="-fx-accent: #3498db;" />
+
+    <Label fx:id="statusLabel"
+           text="Ready"
+           style="-fx-font-style: italic; -fx-text-fill: #7f8c8d;" />
+
+    <!-- Логи -->
+    <VBox spacing="5">
+        <Label text="Logs:"
+               style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+
+        <TextArea fx:id="logArea"
+                  editable="false"
+                  wrapText="true"
+                  style="-fx-control-inner-background: #2c3e50; -fx-text-fill: #ecf0f1; -fx-font-family: 'Monospaced'; -fx-font-size: 12px;"
+                  VBox.vgrow="ALWAYS">
+            <padding>
+                <Insets top="5" right="5" bottom="5" left="5" />
+            </padding>
+        </TextArea>
+    </VBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Status:"
+               style="-fx-font-weight: bold;" />
+        <Label fx:id="detailedStatusLabel"
+               text="Ready"
+               style="-fx-font-style: italic;" />
+    </HBox>
+
+</VBox>
